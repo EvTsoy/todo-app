@@ -8,28 +8,7 @@ export default {
   state() {
     return {
       currentFilter: [],
-      todos: [
-        {
-          id: 1,
-          text: 'todo number 1',
-          status: 0,
-        },
-        {
-          id: 2,
-          text: 'todo number 12',
-          status: 0,
-        },
-        {
-          id: 3,
-          text: 'todo number 123',
-          status: 1,
-        },
-        {
-          id: 4,
-          text: 'todo number 1234',
-          status: 1,
-        },
-      ],
+      todos: [],
     };
   },
   mutations,

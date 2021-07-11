@@ -3,20 +3,23 @@
     <add-todo @addTodo="addTodo"></add-todo>
     <filter-panel @category="category"></filter-panel>
 
-    <todo-container
-      v-if="categorySelected !== '1'"
-      :todos="filteredTodos(0)"
-      title="Todo:"
-    ></todo-container>
+    <base-spinner v-if="isLoading" />
+    <div v-else>
+      <todo-container
+        v-if="categorySelected !== '1'"
+        :todos="filteredTodos(0)"
+        title="Todo:"
+      ></todo-container>
 
-    <hr class="d-1" />
+      <hr class="d-1" />
 
-    <todo-container
-      v-if="categorySelected !== '0'"
-      title="Completed:"
-      done
-      :todos="filteredTodos(1)"
-    ></todo-container>
+      <todo-container
+        v-if="categorySelected !== '0'"
+        title="Completed:"
+        done
+        :todos="filteredTodos(1)"
+      ></todo-container>
+    </div>
   </div>
 </template>
 
@@ -36,6 +39,7 @@ export default {
     return {
       searchItem: '',
       categorySelected: 'all',
+      isLoading: false,
     };
   },
 
@@ -61,8 +65,10 @@ export default {
   },
 
   methods: {
-    loadTodos() {
-      this.$store.dispatch('todos/loadTodos');
+    async loadTodos() {
+      this.isLoading = true;
+      await this.$store.dispatch('todos/loadTodos');
+      this.isLoading = false;
     },
 
     category(e) {
