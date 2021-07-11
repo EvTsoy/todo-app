@@ -1,0 +1,37 @@
+.button {
+  @include p1;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: $radius-5;
+  cursor: pointer;
+}
+
+.button-sm {
+  @include p2;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: $radius-5;
+  cursor: pointer;
+}
+
+.button-primary {
+  display: block;
+  width: 100%;
+  background-color: $purple-1;
+  color: $white;
+}
+
+.button-edit {
+  background-color: $blue-2;
+  color: $white;
+}
+
+.button-delete {
+  background-color: $red-1;
+  color: $white;
+}
+
+.button-ready {
+  background-color: $green-1;
+  color: $white;
+}

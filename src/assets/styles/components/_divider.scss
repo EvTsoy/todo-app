@@ -1,0 +1,11 @@
+.d-10 {
+  @include divider(1rem);
+}
+
+.d-1 {
+  @include divider(3rem);
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #f0f0f0, $purple-1, #f0f0f0);
+  visibility: visible;
+}

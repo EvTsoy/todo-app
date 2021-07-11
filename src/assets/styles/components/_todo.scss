@@ -1,0 +1,48 @@
+.todos {
+  .todo-item {
+    @include p1;
+    @include input-1;
+    border: $borderGray-2;
+    margin: 1rem 0;
+    cursor: pointer;
+    p {
+      display: inline;
+      &.done {
+        text-decoration: line-through;
+        color: $gray-2;
+      }
+    }
+    &.active {
+      border: $borderGray-1;
+      .todo-item__actions {
+        display: block;
+        @media (max-width: 768px) {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    &__actions {
+      display: none;
+      margin: 1rem 3rem;
+      text-align: end;
+      .button-sm {
+        margin-right: 2rem;
+        @media (max-width: 768px) {
+        }
+
+      }
+      i {
+        margin-right: 1rem;
+        cursor: pointer;
+        @media (max-width: 768px) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .todoimg {
+      margin-right: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.container {
+  min-height: 100vh;
+  box-shadow: $shadow-1;
+  max-width: 70rem;
+  margin: auto;
+  padding: 5rem;
+  h1 {
+    @include h1;
+  }
+  .welcome-message {
+    color: $pink-1;
+  }
+
+  .lead {
+    @include p1;
+    padding: 2rem 0;
+  }
+}

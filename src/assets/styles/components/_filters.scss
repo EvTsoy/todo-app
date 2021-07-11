@@ -1,0 +1,28 @@
+.filters {
+  margin: 2rem 0;
+  .form-filters {
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    .form-group {
+      label {
+        @include p1;
+        margin-right: 2rem;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 2rem;
+      }
+    }
+    .form-control {
+      @include input-1;
+      &:focus {
+        outline: none;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}

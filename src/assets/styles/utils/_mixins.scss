@@ -1,0 +1,44 @@
+@mixin p1($color: $gray-1) {
+  font-family: $mainFont;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+@mixin p2($color: $gray-1) {
+  font-family: $mainFont;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+@mixin h1($color: $gray-1) {
+  color: $color;
+  font-family: $mainFont;
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+@mixin h2($color: $gray-1) {
+  color: $color;
+  font-family: $mainFont;
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+@mixin input-1($color: $gray-1) {
+  color: $color;
+  border-radius: $radius-5;
+  border: $borderGray-2;
+  outline: none;
+  padding: 1rem;
+  &:focus {
+    border: $borderGray-1;
+  }
+}
+
+@mixin divider($size: 0.5rem) {
+  margin: $size auto 1.5rem;
+  width: 50%;
+  visibility: hidden;
+}

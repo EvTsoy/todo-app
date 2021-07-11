@@ -1,0 +1,6 @@
+.add-todo {
+  &__title {
+    @include h2;
+    margin: 2rem 1rem 0.5rem;
+  }
+}
